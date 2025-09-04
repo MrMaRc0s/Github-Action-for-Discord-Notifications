@@ -2,8 +2,15 @@ name: Super-Linter
 
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   super-lint:
+    permissions:
+      contents: read
+      pull-requests: read
+      
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
